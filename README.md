@@ -5,11 +5,9 @@ Home: https://github.com/watson-developer-cloud/python-sdk
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ibm-watson-feedstock/blob/master/LICENSE.txt)
 
 Summary: Client library to use the IBM Watson Services
-
-
 
 Current build status
 ====================
