@@ -1,5 +1,5 @@
 {% set name = "ibm-watson" %}
-{% set version = "5.3.1" %}
+{% set version = "6.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 118892717810be03bf7274726ab22ef453c85e339f919ad61813ebefccbfbdb5
+  sha256: 6291fa30133dcc6c45133f6332615c046bedaf0b3937eff669034017e89853ce
 
 build:
   number: 0
