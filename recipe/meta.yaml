@@ -1,5 +1,5 @@
 {% set name = "ibm-watson" %}
-{% set version = "7.0.0" %}
+{% set version = "7.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e456343fbef642e94a5dd192ca69f0be6989636f45eaaf62c5518bce486eacff
+  sha256: ebf8139ef5951ed0d60757f977744dfaae651dbfc5184a6a0e5a520f8e6e5a94
 
 build:
   number: 0
@@ -20,11 +20,11 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - ibm-cloud-sdk-core >=3.3.6,<4
+    - ibm-cloud-sdk-core >=3.3.6,==3.*
     - python >=3.6
     - python-dateutil >=2.5.3
     - requests >=2.0,<3.0
-    - websocket-client ==1.1.0
+    - websocket-client >=1.1.0
 
 test:
   imports:
