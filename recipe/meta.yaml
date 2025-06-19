@@ -1,5 +1,5 @@
 {% set name = "ibm-watson" %}
-{% set version = "8.0.0" %}
+{% set version = "10.0.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bc1740d22814134d6fda383001a7345b3c87d1ec7372c915ff70a6aaa510973d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6a688924c046b4eeacc95c780f0d97583f83c18e4a4fa263d2f0cc0e6ee2d23f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,7 +20,7 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - ibm-cloud-sdk-core >=3.3.6,<4.0.0
+    - ibm-cloud-sdk-core >=3.3.6,==3.*
     - python >={{ python_min }}
     - python-dateutil >=2.5.3
     - requests >=2.0,<3.0
