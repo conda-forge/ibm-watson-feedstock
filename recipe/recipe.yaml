@@ -2,15 +2,15 @@ schema_version: 1
 
 context:
   name: ibm-watson
-  version: "11.0.0"
+  version: "11.1.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 826741b335a33d582a4ed2e53968ab049015700ab75ad3d1dd62d9abf91da9db
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 349cf7fe0d928380fcf993841f00e71e2837941ae0fbfa187ef73a65545a40fa
 
 build:
   number: 0
